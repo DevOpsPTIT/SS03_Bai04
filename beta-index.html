@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta App - Port 8080 | DevOps Nginx Virtual Host</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-color: #0d1117;
+            --card-bg: rgba(22, 27, 34, 0.8);
+            --accent-blue: #38bdf8;
+            --accent-purple: #a855f7;
+            --text-main: #f0f6fc;
+            --text-sub: #8b949e;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--bg-color);
+            background-image: 
+                radial-gradient(at 20% 20%, rgba(56, 189, 248, 0.15) 0px, transparent 50%),
+                radial-gradient(at 80% 80%, rgba(168, 85, 247, 0.15) 0px, transparent 50%);
+            color: var(--text-main);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 2rem;
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 3rem;
+            max-width: 600px;
+            width: 100%;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+        }
+
+        .port-badge {
+            display: inline-block;
+            padding: 0.4rem 1.2rem;
+            background: rgba(56, 189, 248, 0.15);
+            border: 1px solid rgba(56, 189, 248, 0.4);
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            font-weight: 800;
+            border-radius: 9999px;
+            margin-bottom: 1.5rem;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p {
+            color: var(--text-sub);
+            font-size: 1.05rem;
+            line-height: 1.6;
+            margin-bottom: 2rem;
+        }
+
+        .status-box {
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 12px;
+            padding: 1.2rem;
+            display: flex;
+            justify-content: space-around;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .status-item {
+            text-align: center;
+        }
+
+        .status-item .label {
+            font-size: 0.8rem;
+            color: var(--text-sub);
+            margin-bottom: 0.3rem;
+        }
+
+        .status-item .value {
+            font-weight: 700;
+            color: var(--accent-blue);
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="port-badge">PORT 8080</div>
+        <h1>🚀 Beta App Testing Environment</h1>
+        <p>Môi trường kiểm thử ứng dụng Beta đang lắng nghe và phục vụ độc lập trên Cổng 8080 của Nginx Virtual Host.</p>
+        
+        <div class="status-box">
+            <div class="status-item">
+                <div class="label">Môi Trường</div>
+                <div class="value">Beta Staging</div>
+            </div>
+            <div class="status-item">
+                <div class="label">Thư Mục Root</div>
+                <div class="value">/var/www/beta-app/html</div>
+            </div>
+            <div class="status-item">
+                <div class="label">Trạng Thái</div>
+                <div class="value">Active (200 OK)</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
